@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D7197531B16B137007E7F4D /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197521B16B137007E7F4D /* CanvasViewController.swift */; };
 		FE77823B1B16B007006EA4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77823A1B16B007006EA4D0 /* AppDelegate.swift */; };
-		FE77823D1B16B007006EA4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77823C1B16B007006EA4D0 /* ViewController.swift */; };
 		FE7782401B16B007006EA4D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE77823E1B16B007006EA4D0 /* Main.storyboard */; };
 		FE7782421B16B007006EA4D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7782411B16B007006EA4D0 /* Images.xcassets */; };
 		FE7782451B16B007006EA4D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7782431B16B007006EA4D0 /* LaunchScreen.xib */; };
@@ -26,10 +26,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D7197521B16B137007E7F4D /* CanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CanvasViewController.swift; path = ../CanvasViewController.swift; sourceTree = "<group>"; };
 		FE7782351B16B007006EA4D0 /* CanvasPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7782391B16B007006EA4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE77823A1B16B007006EA4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE77823C1B16B007006EA4D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE77823F1B16B007006EA4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE7782411B16B007006EA4D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE7782441B16B007006EA4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 		FE7782371B16B007006EA4D0 /* CanvasPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				6D7197521B16B137007E7F4D /* CanvasViewController.swift */,
 				FE77823A1B16B007006EA4D0 /* AppDelegate.swift */,
-				FE77823C1B16B007006EA4D0 /* ViewController.swift */,
 				FE77823E1B16B007006EA4D0 /* Main.storyboard */,
 				FE7782411B16B007006EA4D0 /* Images.xcassets */,
 				FE7782431B16B007006EA4D0 /* LaunchScreen.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE77823D1B16B007006EA4D0 /* ViewController.swift in Sources */,
+				6D7197531B16B137007E7F4D /* CanvasViewController.swift in Sources */,
 				FE77823B1B16B007006EA4D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

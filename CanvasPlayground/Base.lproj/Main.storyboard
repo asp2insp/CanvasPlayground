@@ -1,25 +1,134 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Canvas View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CanvasViewController" customModule="CanvasPlayground" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g08-c7-3oa">
+                                <rect key="frame" x="0.0" y="335" width="320" height="233"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="pS3-4P-ueM">
+                                        <rect key="frame" x="31" y="24" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="VUT-h5-ptY"/>
+                                            <constraint firstAttribute="height" constant="60" id="ZG1-pR-8s4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="excited" translatesAutoresizingMaskIntoConstraints="NO" id="sS5-BB-fKT">
+                                        <rect key="frame" x="130" y="24" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="SnN-8A-vA1"/>
+                                            <constraint firstAttribute="height" constant="60" id="oiS-kN-oHe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tongue" translatesAutoresizingMaskIntoConstraints="NO" id="rX9-6P-HF6">
+                                        <rect key="frame" x="231" y="24" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="J6D-y0-zZV"/>
+                                            <constraint firstAttribute="width" constant="60" id="p2N-fv-aJC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wink" translatesAutoresizingMaskIntoConstraints="NO" id="UrF-2y-KXW">
+                                        <rect key="frame" x="30" y="123" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="ZvQ-xg-TZk"/>
+                                            <constraint firstAttribute="height" constant="60" id="s0T-yi-ybw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-Zk-tFd">
+                                        <rect key="frame" x="130" y="123" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="FWk-ch-h79"/>
+                                            <constraint firstAttribute="height" constant="60" id="ysh-i0-bcI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dead" translatesAutoresizingMaskIntoConstraints="NO" id="1Dk-pQ-0J4">
+                                        <rect key="frame" x="230" y="123" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="fJu-hr-1YF"/>
+                                            <constraint firstAttribute="width" constant="60" id="pOf-mQ-O0O"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="vfG-Kk-egm">
+                                        <rect key="frame" x="150" y="0.0" width="20" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="iFy-4J-lNF"/>
+                                            <constraint firstAttribute="height" constant="16" id="vG0-S3-7fP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88192894345238093" green="0.88192894345238093" blue="0.88192894345238093" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="h1u-Zk-tFd" secondAttribute="centerX" id="1rt-ew-l2L"/>
+                                    <constraint firstItem="h1u-Zk-tFd" firstAttribute="leading" secondItem="UrF-2y-KXW" secondAttribute="trailing" constant="40" id="7KG-yD-ebZ"/>
+                                    <constraint firstItem="pS3-4P-ueM" firstAttribute="top" secondItem="rX9-6P-HF6" secondAttribute="top" id="7bF-bd-PGf"/>
+                                    <constraint firstItem="pS3-4P-ueM" firstAttribute="top" secondItem="sS5-BB-fKT" secondAttribute="top" id="9tj-OH-12I"/>
+                                    <constraint firstItem="sS5-BB-fKT" firstAttribute="top" secondItem="g08-c7-3oa" secondAttribute="top" constant="24" id="Djr-AU-Wod"/>
+                                    <constraint firstAttribute="height" constant="233" id="Hek-ty-WGZ"/>
+                                    <constraint firstAttribute="centerX" secondItem="vfG-Kk-egm" secondAttribute="centerX" id="ITm-BE-m38"/>
+                                    <constraint firstAttribute="bottom" secondItem="h1u-Zk-tFd" secondAttribute="bottom" constant="50" id="N21-gA-zaX"/>
+                                    <constraint firstItem="h1u-Zk-tFd" firstAttribute="bottom" secondItem="1Dk-pQ-0J4" secondAttribute="bottom" id="Nz3-ew-9mN"/>
+                                    <constraint firstItem="1Dk-pQ-0J4" firstAttribute="leading" secondItem="h1u-Zk-tFd" secondAttribute="trailing" constant="40" id="O7Q-ck-ASI"/>
+                                    <constraint firstItem="h1u-Zk-tFd" firstAttribute="bottom" secondItem="UrF-2y-KXW" secondAttribute="bottom" id="PA9-at-Jc5"/>
+                                    <constraint firstAttribute="centerX" secondItem="sS5-BB-fKT" secondAttribute="centerX" id="QbI-ky-rsJ"/>
+                                    <constraint firstItem="h1u-Zk-tFd" firstAttribute="top" secondItem="sS5-BB-fKT" secondAttribute="bottom" constant="39" id="QiD-S1-clq"/>
+                                    <constraint firstItem="vfG-Kk-egm" firstAttribute="top" secondItem="g08-c7-3oa" secondAttribute="top" id="StD-fK-v34"/>
+                                    <constraint firstItem="sS5-BB-fKT" firstAttribute="leading" secondItem="pS3-4P-ueM" secondAttribute="trailing" constant="39" id="ZQ1-yY-2cj"/>
+                                    <constraint firstItem="rX9-6P-HF6" firstAttribute="leading" secondItem="sS5-BB-fKT" secondAttribute="trailing" constant="41" id="ig9-Ng-Exz"/>
+                                    <constraint firstItem="sS5-BB-fKT" firstAttribute="top" secondItem="vfG-Kk-egm" secondAttribute="bottom" constant="8" id="q08-AP-lrE"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Np2-8O-8TQ" appends="YES" id="k8P-7Y-MAa"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="g08-c7-3oa" secondAttribute="bottom" id="EBl-EU-XXB"/>
+                            <constraint firstAttribute="trailing" secondItem="g08-c7-3oa" secondAttribute="trailing" id="RWc-MV-gHe"/>
+                            <constraint firstItem="g08-c7-3oa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="x2n-LX-qqQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="EBl-EU-XXB" id="ajF-ow-oAd"/>
+                        <outlet property="trayView" destination="g08-c7-3oa" id="6B9-DG-sZt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Np2-8O-8TQ">
+                    <connections>
+                        <action selector="onPan:" destination="vXZ-lx-hvc" id="4JS-Q1-yBy"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="162" y="331"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dead" width="60" height="60"/>
+        <image name="down_arrow" width="20" height="14"/>
+        <image name="excited" width="60" height="60"/>
+        <image name="happy" width="60" height="60"/>
+        <image name="sad" width="60" height="60"/>
+        <image name="tongue" width="60" height="60"/>
+        <image name="wink" width="60" height="60"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
