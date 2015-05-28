@@ -18,6 +18,9 @@ class CanvasViewController: UIViewController {
   
     var trayBottom: CGFloat!
     var startingY: CGFloat?
+    var startingSmileyCenter: CGPoint?
+  
+    var newSmileyImageView: UIImageView!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,23 @@ class CanvasViewController: UIViewController {
         trayView.setNeedsLayout()
     }
 
+    @IBAction func onSmileyPan(sender: UIPanGestureRecognizer) {
+      var point = sender.locationInView(view)
+      
+      switch sender.state {
+      case .Began:
+        var imageView = sender.view as! UIImageView
+        newSmileyImageView = UIImageView(image: imageView.image)
+        view.addSubview(newSmileyImageView)
+        newSmileyImageView.center = imageView.center
+        newSmileyImageView.center.y += trayView.frame.origin.y
+      case .Changed, .Ended, .Cancelled:
+        newSmileyImageView.center.x = point.x
+        newSmileyImageView.center.y = point.y
+      case .Failed, .Possible:
+        newSmileyImageView.center = startingSmileyCenter!
+      }
+    }
     /*
     // MARK: - Navigation
 
