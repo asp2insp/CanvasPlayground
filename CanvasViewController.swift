@@ -12,6 +12,9 @@ class CanvasViewController: UIViewController {
 
     @IBOutlet weak var trayView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    let openConstraintConstant : CGFloat = 0.0
+    let closedConstraintConstant : CGFloat = -213.0
   
     var trayBottom: CGFloat!
     var startingY: CGFloat?
@@ -35,10 +38,14 @@ class CanvasViewController: UIViewController {
         case .Began:
             startingY = point.y
         case .Changed:
-            bottomConstraint.constant = (startingY! - point.y)
+            // TODO fix drag up
+            bottomConstraint.constant = max(startingY! - point.y, closedConstraintConstant)
         case .Ended, .Cancelled:
-            bottomConstraint.constant = (startingY! - point.y)
-            trayBottom = bottomConstraint.constant
+            if velocity.y > 0 {
+                bottomConstraint.constant = closedConstraintConstant
+            } else {
+                bottomConstraint.constant = openConstraintConstant
+            }
         case .Failed, .Possible:
             bottomConstraint.constant = trayBottom
         }
